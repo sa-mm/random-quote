@@ -1,5 +1,6 @@
 var quoteString = "";
-var url = "http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?";
+// var url = "https://cors.now.sh/http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?";
+var url = "https://cors.now.sh/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en";
 var getRandomQuote = function(json) {
   //console.log(json);
     quoteString = json.quoteText;

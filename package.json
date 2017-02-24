@@ -1,0 +1,21 @@
+{
+  "name": "random-quote",
+  "version": "1.0.0",
+  "description": "Generates a random quote.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sa-mm/random-quote.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sa-mm/random-quote/issues"
+  },
+  "homepage": "https://github.com/sa-mm/random-quote#readme"
+}

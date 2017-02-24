@@ -14,6 +14,7 @@ var getRandomQuote = function(json) {
     }
     $(".quote-author").html(quoteAuthorString); 
   
+  $("#new-button").empty(); //otherwise Tweet buttons multiply.
   twttr.widgets.createShareButton(
   quoteLinkString,
   document.getElementById('new-button'),
@@ -30,7 +31,6 @@ var getRandomQuote = function(json) {
 $(document).ready(function() {
   $.getJSON(url,getRandomQuote);
   $("#getQuote").on("click", function(){
-    $("#new-button").empty(); //otherwise Tweet buttons multiply.
     $.getJSON(url,getRandomQuote);
   });
 });

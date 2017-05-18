@@ -7,18 +7,21 @@
     <link rel="stylesheet" href="/css/master.css" type="text/css" media="screen">
   </head>
   <body>
-    <div class="container">
+    <div id="quote-box" class="container">
       <div class="well">
         <blockquote>
-          <p class="quote">This is where the quote goes.</p>
-          <footer class="text-right quote-author">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+          <p id="text" class="quote">This is where the quote goes.</p>
+          <footer id="author" class="text-right quote-author">Someone famous in <cite title="Source Title">Source Title</cite></footer>
         </blockquote>
       </div>
-      <a id="new-button"></a>
-      <button type="button" id="getQuote" class="btn btn-primary btn-sm pull-right">New Quote</button>
+      <a id="tweet-quote" class='btn btn-small' href="https://twitter.com/intent/tweet?text=hi">Tweet</a>
+
+      <button type="button" id="new-quote" class="btn btn-primary btn-sm pull-right">New Quote</button>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
     <script src="js/bundle.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
   </body>
 </html>

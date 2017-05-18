@@ -4,3 +4,8 @@
 body {
   margin-top: 60px;
 }
+
+#tweet-quote {
+  background-color: #4099FF;
+  color: white;
+}

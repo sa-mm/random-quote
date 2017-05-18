@@ -14,40 +14,18 @@ var getRandomQuote = function(json) {
     }
     $(".quote-author").html(quoteAuthorString); 
   
-  $("#new-button").empty(); //otherwise Tweet buttons multiply.
-  twttr.widgets.createShareButton(
-  quoteLinkString,
-  document.getElementById('new-button'),
-  {
-    count: 'none',
-    text: json.quoteText + ' —' + quoteAuthorString,
-    size: 'large',
-    hashtags: 'quote'
-  }).then(function (el) {
-    // console.log("Button created.")
-  });
+  var tweetURL = [
+    'https://twitter.com/intent/tweet?',
+    'text=' + quoteString,
+    '&url=' + quoteLinkString
+  ].join('')
+
+  $("#tweet-quote").attr('href', tweetURL)
 }
 
 $(document).ready(function() {
   $.getJSON(url,getRandomQuote);
-  $("#getQuote").on("click", function(){
+  $("#new-quote").on("click", function(){
     $.getJSON(url,getRandomQuote);
   });
 });
-
-window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
- 
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
- 
-  return t;
-}(document, "script", "twitter-wjs"));
